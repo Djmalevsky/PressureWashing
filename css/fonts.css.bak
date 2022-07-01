@@ -24,11 +24,7 @@ h6,
 .h6 {
 	font-family: "Poppins", "Helvetica", "Arial", sans-serif;
 }
-img {
-   position: absolute;
-   top: 0px;
-   right: 0px;
-}
+
 /*Main Menu*/
 #mainMenu nav>ul>li>a {
 	font-family: "Poppins", "Helvetica", "Arial", sans-serif;
@@ -85,8 +81,8 @@ a.btn:not([href]):not([tabindex]),
 /*Page Title*/
 #page-title .page-title>h1 {
 	font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-	font-size: 44px;
-	line-height: 56px;
+	font-size: 20px;
+	line-height: 10px;
 	font-weight: 400;
 }
 
