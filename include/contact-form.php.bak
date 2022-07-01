@@ -13,7 +13,7 @@ require 'php-mailer/src/PHPMailer.php';
 
 
 // Enter your email address. If you need multiple email recipes simply add a comma: email@domain.com, email2@domain.com
-$to = "";
+$to = "djmalevsky@gmail.com";
 
 // Add your reCaptcha Secret key if you wish to activate google reCaptcha security
 $recaptcha_secret_key = ''; 
@@ -44,7 +44,7 @@ $form_title	= isset($_POST["form-name"]) ? $_POST["form-name"] : RESPONSE_MSG['f
 $subject = isset($_POST[$form_prefix."subject"]) ? $_POST[$form_prefix."subject"] : RESPONSE_MSG['form']['subject'];
 $email = isset($_POST[$form_prefix."email"]) ? $_POST[$form_prefix."email"] : null;
 $name = isset($_POST[$form_prefix."name"]) ? $_POST[$form_prefix."name"] : null;
-
+$address = isset($_POST[$form_prefix."address"]) ? $_POST[$form_prefix."address"] : null;
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST') {
     
@@ -152,7 +152,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST') {
                  $mail->addAttachment($attachment['tmp_name'],$attachment['name']); 
             }
         }
-
         if(!$mail->Send()) {
             $response = array ('response'=>'error', 'message'=> $mail->ErrorInfo);  
         }else {                  
